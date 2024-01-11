@@ -15,6 +15,9 @@ i18n
         "busSchedule.title": "Bus Schedule",
         "settings.title": "Settings",
         "settings.language": "Change the language",
+        "theoty.title": "Theoty",
+        "safety.title": "Safety equipment",
+
 
 
 
@@ -31,7 +34,8 @@ i18n
           "busSchedule.title": "Розклад автобусів",
           "settings.title": "Налаштування",
           "settings.language": "Змінити Мову",
-
+          "theoty.title": "Теорія",
+          "safety.title": "Техніка безпеки",
 
 
 
@@ -49,6 +53,11 @@ i18n
           "busSchedule.title": "Busfahrplan",
           "settings.title": "Einstellungen",
           "settings.language": "Ändere die Sprache",
+          "theoty.title": "Theorie",
+          "safety.title": "Sicherheitsausrüstung",
+
+
+
 
 
 

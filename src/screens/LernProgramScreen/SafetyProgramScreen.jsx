@@ -7,11 +7,11 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { useTranslation } from 'react-i18next';
-import { Typography } from "../Typography";
-import BackArrowPurpleSvg from "../../assets/icons/backArrowPurple.svg";
+import { Typography } from "../../Typography";
+import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
 
-const LearnProgramScreen = () => {
+const SafetyProgramScreen = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
 
@@ -34,7 +34,7 @@ const LearnProgramScreen = () => {
           <BackArrowPurpleSvg width={40} height={40} />
         </TouchableOpacity>
         <Typography f24 semibold color="#563187" textAlign="center">
-      {t('learnProgram.title')}
+        {t('safety.title')}
     </Typography>
         <View style={{ width: 20, height: 20 }} />
       </View>
@@ -42,7 +42,7 @@ const LearnProgramScreen = () => {
         showsVerticalScrollIndicator={false}
         style={{ marginTop: 20 }}
       >
-        <Typography>123</Typography>
+        <Typography>234</Typography>
       </ScrollView>
     </LinearGradient>
   );
@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LearnProgramScreen;
+export default SafetyProgramScreen;

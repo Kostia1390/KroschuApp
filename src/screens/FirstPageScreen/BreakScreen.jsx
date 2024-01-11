@@ -1,19 +1,19 @@
 import React from "react";
 import { View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
-import { Typography } from "../Typography";
+import { Typography } from "../../Typography";
 import { LinearGradient } from "expo-linear-gradient";
 import { useTranslation } from 'react-i18next';
-import BackArrowPurpleSvg from "../../assets/icons/backArrowPurple.svg";
+import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
 
-const TestScreen = () => {
+const BreakScreen = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
 
 
   return (
     <LinearGradient
-      colors={["#ffffff", "#ffffff"]}
+      colors={ ["#ffffff", "#fafafa"]}
       style={styles.container}
     >
       <View style={styles.header}>
@@ -21,7 +21,7 @@ const TestScreen = () => {
         <BackArrowPurpleSvg width={40} height={40} />
         </TouchableOpacity>
         <Typography f24 semibold color="#563187" textAlign="center">
-        {t('test.title')}
+        {t('break.title')}
         </Typography>
         <View style={{ width: 30, height: 30 }} />
       </View>
@@ -29,7 +29,8 @@ const TestScreen = () => {
         showsVerticalScrollIndicator={false}
         style={{ marginTop: 20 }}
       >
-       <Typography>123</Typography>
+
+       <Typography f29 semibold color="#563187" textAlign="center">I Зміна</Typography>
       </ScrollView>
     </LinearGradient>
   );
@@ -50,22 +51,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   dailyForecast: {
-    borderBottomWidth: 8,
+    borderBottomWidth: 2,
     borderBottomColor: "#fff",
     paddingBottom: 10,
-  },
-  hourlyForecast: {
-    borderBottomWidth: 1,
-    borderBottomColor: "#fff",
-    paddingVertical: 10,
-    alignItems: "center",
-  },
-  lastHourlyForecast: {
-    borderBottomWidth: 0,
   },
   lastDailyForecast: {
     borderBottomWidth: 0,
   },
 });
 
-export default TestScreen;
+export default BreakScreen;
