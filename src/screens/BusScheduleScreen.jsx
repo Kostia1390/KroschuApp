@@ -18,9 +18,9 @@ const BusScheduleScreen = () => {
     >
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          <BackArrowPurpleSvg width={30} height={30} />
+        <BackArrowPurpleSvg width={40} height={40} />
         </TouchableOpacity>
-        <Typography f24 semibold color="#000000" textAlign="center">
+        <Typography f24 semibold color="#563187" textAlign="center">
         {t('busSchedule.title')}
         </Typography>
         <View style={{ width: 30, height: 30 }} />

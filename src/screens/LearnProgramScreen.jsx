@@ -31,7 +31,7 @@ const LearnProgramScreen = () => {
         }}
       >
         <TouchableOpacity onPress={() => navigation.goBack()}>
-          <BackArrowPurpleSvg width={30} height={30} />
+          <BackArrowPurpleSvg width={40} height={40} />
         </TouchableOpacity>
         <Typography f24 semibold color="#563187" textAlign="center">
       {t('learnProgram.title')}
