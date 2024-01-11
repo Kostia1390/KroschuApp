@@ -1,9 +1,9 @@
 import React from "react";
 import { View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
-import { Typography } from "../Typography";
+import { Typography } from "../../Typography";
 import { LinearGradient } from "expo-linear-gradient";
 import { useTranslation } from 'react-i18next';
-import BackArrowPurpleSvg from "../../assets/icons/backArrowPurple.svg";
+import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
 
 const BusScheduleScreen = () => {

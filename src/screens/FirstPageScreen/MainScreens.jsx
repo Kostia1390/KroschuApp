@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { StyleSheet, ScrollView, View, TouchableOpacity } from "react-native";
+import { StyleSheet, ScrollView, View, TouchableOpacity, StatusBar } from "react-native";
 import { useSelector} from "react-redux";
 import { LinearGradient } from "expo-linear-gradient";
-import WeatherWindows from "../components/WeatherWindows";
-import { Typography } from "../Typography";
-import Settings from "../../assets/icons/settings.svg";
-import SettingsModal from "../components/SettingsModal";
+import WeatherWindows from "../../components/WeatherWindows";
+import { Typography } from "../../Typography";
+import Settings from "../../../assets/icons/settings.svg";
+import SettingsModal from "../../components/SettingsModal";
 import { useTranslation } from 'react-i18next';
 import { useNavigation } from "@react-navigation/native";
-import Logo from "../../assets/icons/LogoSvg.svg";
+import Logo from "../../../assets/icons/LogoSvg.svg";
 
 const MainScreens = () => {
   const navigation = useNavigation();
@@ -24,6 +24,8 @@ const MainScreens = () => {
       colors={ ["#fefdfd", "#ffffff"]}
       style={styles.container}
     >
+            <StatusBar backgroundColor="#fefdfd" barStyle="dark-content" /> 
+
             <Logo style={styles.logo} width={300} height={120}/>
 
       <View style={{ flexDirection: "row", gap: 40 }}>
@@ -85,11 +87,10 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     width: "100%",
     paddingHorizontal: 40,
-    paddingTop: 150,
+    paddingTop: 100,
   },
   logo: {
     position: 'absolute',
-    top: 50,
   },
   scrollViewStyle: {
     flex: 1,
@@ -105,15 +106,14 @@ const styles = StyleSheet.create({
     height: 50,
     justifyContent: "center",
     alignItems: "center",
-    marginTop:10,
-    marginBottom: 40,
+    marginTop:5,
   },
   inputWrapper: {
     width: 200,
     height: 50,
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 40,
+    marginBottom: 10,
   },
 });
 

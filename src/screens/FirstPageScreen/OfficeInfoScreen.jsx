@@ -1,23 +1,21 @@
 import React from "react";
 import { View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
-import { useSelector } from "react-redux";
-import { Typography } from "../Typography";
-import { LinearGradient } from "expo-linear-gradient";
+import { Typography } from "../../Typography";
+import { LinearGradient } from "expo-linear-gradient"
 import { useTranslation } from 'react-i18next';
-import BackArrowPurpleSvg from "../../assets/icons/backArrowPurple.svg";
+import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
 
-const PhoneNumberScreen = () => {
+const OfficeInfoScreen = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
 
 
 
 
-
   return (
     <LinearGradient
-      colors={["#ffffff", "#fafafa"]}
+      colors={ ["#ffffff", "#fafafa"]}
       style={styles.container}
     >
       <View style={styles.header}>
@@ -25,7 +23,7 @@ const PhoneNumberScreen = () => {
         <BackArrowPurpleSvg width={40} height={40} />
         </TouchableOpacity>
         <Typography f24 semibold color="#563187" textAlign="center">
-        {t('phoneNumber.title')}
+        {t('officeInfo.title')}
         </Typography>
         <View style={{ width: 30, height: 30 }} />
       </View>
@@ -63,4 +61,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default PhoneNumberScreen;
+export default OfficeInfoScreen;
