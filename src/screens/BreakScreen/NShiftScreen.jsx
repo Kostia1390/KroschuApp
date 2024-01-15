@@ -7,7 +7,7 @@ import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import WeatherWindows from "../../components/WeatherWindows";
 import { useNavigation } from "@react-navigation/native";
 
-const BreakScreen = () => {
+const NShiftScreen = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
 
@@ -23,7 +23,7 @@ const BreakScreen = () => {
         <BackArrowPurpleSvg width={40} height={40} />
         </TouchableOpacity>
         <Typography f24 semibold color="#563187" textAlign="center">
-        {t('break.title')}
+        {`N ${t('shift.title')}`}
         </Typography>
         <View style={{ width: 30, height: 30 }} />
       </View>
@@ -31,19 +31,13 @@ const BreakScreen = () => {
         showsVerticalScrollIndicator={false}
         style={{ marginTop: 20 }}
       >
- <TouchableOpacity onPress={() => navigation.navigate("IShift")}>
- <WeatherWindows title={`I ${t('shift.title')}`} />
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("IIShift")}>
-      <WeatherWindows title={`II ${t('shift.title')}`} />
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("IIIShift")}>
-      <WeatherWindows title={`III ${t('shift.title')}`} />
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("NShift")}>
-      <WeatherWindows title={`N ${t('shift.title')}`} />
-      </TouchableOpacity>
-      
+
+       <Typography f36 semibold color="#563187" marginTop={180} textAlign="center">1 Перерва:   12:20-12:40</Typography>
+       <Typography f36 semibold color="#563187" marginTop={20} textAlign="center">2 Перерва:   15:20-15:30</Typography>
+
+
+
+
       </ScrollView>
     </LinearGradient>
   );
@@ -62,13 +56,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-  // lineStyle: {
-  //   borderBottomColor: '#563187', 
-  //   borderBottomWidth: 10,
-  //   borderRadius:40,  
-  //   width: '100%', 
-  //   marginTop:60
-  // },
 });
 
-export default BreakScreen;
+export default NShiftScreen;

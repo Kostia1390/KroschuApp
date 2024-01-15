@@ -17,6 +17,8 @@ i18n
         "settings.language": "Change the language",
         "theoty.title": "Theoty",
         "safety.title": "Safety equipment",
+        "shift.title": "Shift",
+
 
 
 
@@ -36,6 +38,10 @@ i18n
           "settings.language": "Змінити Мову",
           "theoty.title": "Теорія",
           "safety.title": "Техніка безпеки",
+          "shift.title": "Зміна",
+       
+
+
 
 
 
@@ -55,6 +61,8 @@ i18n
           "settings.language": "Ändere die Sprache",
           "theoty.title": "Theorie",
           "safety.title": "Sicherheitsausrüstung",
+          "shift.title": "Ändern",
+
 
 
 

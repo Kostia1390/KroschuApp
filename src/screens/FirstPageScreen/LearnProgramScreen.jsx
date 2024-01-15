@@ -24,13 +24,8 @@ const LearnProgramScreen = () => {
       colors={ ["#ffffff", "#ffffff"]}
       style={styles.container}
     >
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
+              <View style={styles.header}>
+
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <BackArrowPurpleSvg width={40} height={40} />
         </TouchableOpacity>
@@ -61,17 +56,10 @@ const styles = StyleSheet.create({
     width: "100%",
     paddingHorizontal: 40,
     paddingTop: 50,
-  },
-  hourlyWeatherItem: {
-    borderBottomWidth: 1,
-    borderBottomColor: "#fff",
-    paddingVertical: 10,
-  },
-  firstItem: {
-    marginTop: 10,
-  },
-  lastItem: {
-    borderBottomWidth: 0,
+  }, header: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
 });
 
