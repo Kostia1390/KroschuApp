@@ -10,6 +10,12 @@ import PhoneNumberScreen from "../screens/FirstPageScreen/PhoneNumberScreen";
 import BusScheduleScreen from "../screens/FirstPageScreen/BusScheduleScreen";
 import TheoryProgramScreen from "../screens/LernProgramScreen/TheoryProgramScreen";
 import SafetyProgramScreen from "../screens/LernProgramScreen/SafetyProgramScreen";
+import NShiftScreen from "../screens/BreakScreen/NShiftScreen";
+import IShiftScreen from "../screens/BreakScreen/IShiftScreen";
+import IIShiftScreen from "../screens/BreakScreen/IIShiftScreen";
+import IIIShiftScreen from "../screens/BreakScreen/IIIShiftScreen";
+
+
 
 
 import CitySearchScreen from "../screens/CitySearchScreen";
@@ -65,6 +71,26 @@ export const Navigation = () => {
             <Stack.Screen
           name="SafetyProgram"
           component={SafetyProgramScreen}
+          options={{ headerShown: false }}
+        />
+           <Stack.Screen
+          name="NShift"
+          component={NShiftScreen}
+          options={{ headerShown: false }}
+        />
+             <Stack.Screen
+          name="IShift"
+          component={IShiftScreen}
+          options={{ headerShown: false }}
+        />
+             <Stack.Screen
+          name="IIShift"
+          component={IIShiftScreen}
+          options={{ headerShown: false }}
+        />
+             <Stack.Screen
+          name="IIIShift"
+          component={IIIShiftScreen}
           options={{ headerShown: false }}
         />
           <Stack.Screen

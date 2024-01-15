@@ -8,7 +8,7 @@ import './i18n';
 
 const App = () => (
   <Provider store={store}>
-    <Navigation />
+     <Navigation />
   </Provider>
 );
 

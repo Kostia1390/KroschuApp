@@ -17,6 +17,8 @@ interface TypographyProps extends PropsWithChildren, TextStyle {
   f24?: boolean;
   f27?: boolean;
   f29?: boolean;
+  f36?: boolean;
+  f46?: boolean;
   f64?: boolean;
   light?: boolean;
   normal?: boolean;
@@ -27,7 +29,7 @@ interface TypographyProps extends PropsWithChildren, TextStyle {
   underline?: boolean;
 }
 
-type FontSizeKeys = 'f10' |'f11' | 'f12' | 'f13' | 'f14' | 'f15' | 'f16' | 'f17' | 'f20' | 'f22' | 'f24' | 'f27' | 'f29' | 'f64';
+type FontSizeKeys = 'f10' |'f11' | 'f12' | 'f13' | 'f14' | 'f15' | 'f16' | 'f17' | 'f20' | 'f22' | 'f24' | 'f27' | 'f29' |'f36'|'f46' | 'f64';
 type FontWeightKeys = 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extraBold';
 
 const fontSizeMap: Record<FontSizeKeys, string> = {
@@ -44,6 +46,8 @@ const fontSizeMap: Record<FontSizeKeys, string> = {
   f24: '24px',
   f27: '27px',
   f29: '29px',
+  f36: '36px',
+  f46: '46px',
   f64: '64px',
 }
 
