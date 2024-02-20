@@ -32,8 +32,8 @@ const NShiftScreen = () => {
         style={{ marginTop: 20 }}
       >
 
-       <Typography f36 semibold color="#563187" marginTop={180} textAlign="center">1 Перерва:   12:20-12:40</Typography>
-       <Typography f36 semibold color="#563187" marginTop={20} textAlign="center">2 Перерва:   15:20-15:30</Typography>
+       <Typography f36 semibold color="#563187" marginTop={180} textAlign="center">{`1 ${t("break.title")}`}:  12:20-12:40</Typography>
+       <Typography f36 semibold color="#563187" marginTop={20} textAlign="center">{`2 ${t("break.title")}`}:   15:20-15:30</Typography>
 
 
 
