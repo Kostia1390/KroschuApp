@@ -18,6 +18,9 @@ i18n
         "theoty.title": "Theoty",
         "safety.title": "Safety equipment",
         "shift.title": "Shift",
+        "shift.theory": "Training department (Theory)",
+        "shift.technical": "Technical department, MUST01, Warehouse, QS-WE",
+
 
 
 
@@ -39,7 +42,9 @@ i18n
           "theoty.title": "Теорія",
           "safety.title": "Техніка безпеки",
           "shift.title": "Зміна",
-       
+          "shift.theory": "Навчальний відділ(Теорія)",
+          "shift.technical": "Технічний відділ, MUST01, Склад, QS-WE",
+
 
 
 
@@ -62,6 +67,10 @@ i18n
           "theoty.title": "Theorie",
           "safety.title": "Sicherheitsausrüstung",
           "shift.title": "Ändern",
+          "shift.theory": "Abteilung Ausbildung (Theorie)",
+          "shift.technical": "Technische Abteilung, MUST01, Lager, QS-WE",
+
+
 
 
 
