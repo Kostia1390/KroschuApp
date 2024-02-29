@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import { StyleSheet, ScrollView, View, TouchableOpacity, StatusBar } from "react-native";
-import { useSelector} from "react-redux";
+import {
+  StyleSheet,
+  ScrollView,
+  View,
+  TouchableOpacity,
+  StatusBar,
+} from "react-native";
+import { useSelector } from "react-redux";
 import { LinearGradient } from "expo-linear-gradient";
 import WeatherWindows from "../../components/WeatherWindows";
 import { Typography } from "../../Typography";
 import Settings from "../../../assets/icons/settings.svg";
 import SettingsModal from "../../components/SettingsModal";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import { useNavigation } from "@react-navigation/native";
 import Logo from "../../../assets/icons/LogoSvg.svg";
 
@@ -15,59 +21,47 @@ const MainScreens = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const { t } = useTranslation();
 
-
-
-
-
   return (
-    <LinearGradient
-      colors={ ["#fefdfd", "#ffffff"]}
-      style={styles.container}
-    >
-            <StatusBar backgroundColor="#fefdfd" barStyle="dark-content" /> 
+    <LinearGradient colors={["#fefdfd", "#ffffff"]} style={styles.container}>
+      <StatusBar backgroundColor="#fefdfd" barStyle="dark-content" />
 
-            <Logo style={styles.logo} width={300} height={120}/>
+      <Logo style={styles.logo} width={300} height={120} />
 
       <View style={{ flexDirection: "row", gap: 40 }}>
-        <View  style={styles.inputWrapper} >
-      </View>
+        <View style={styles.inputWrapper}></View>
         <View style={styles.settingsWrapper}>
           <TouchableOpacity onPress={() => setModalVisible(true)}>
             <Settings width={40} height={40} />
           </TouchableOpacity>
         </View>
       </View>
-      <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollViewStyle}>
-      <TouchableOpacity onPress={() => navigation.navigate("LearnProgram")}>
-        <WeatherWindows title= {t('learnProgram.title')} />
-      </TouchableOpacity>
-
-      <TouchableOpacity onPress={() => navigation.navigate("TestScreen")}>
-        <WeatherWindows title={t('test.title')}/>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => navigation.navigate("Break")}>
-        <WeatherWindows title={t('break.title')} />
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        onPress={() => navigation.navigate("OfficeInfo")}
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={styles.scrollViewStyle}
       >
-        <WeatherWindows title={t('officeInfo.title')}/>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("LearnProgram")}>
+          <WeatherWindows title={t("learnProgram.title")} />
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate("PhoneNumber")}
-      >
-        <WeatherWindows title={t('phoneNumber.title')}/>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("TestScreen")}>
+          <WeatherWindows title={t("test.title")} />
+        </TouchableOpacity>
 
-      <TouchableOpacity
-        onPress={() => navigation.navigate("BusSchedule")}
-      >
-        <WeatherWindows title={t('busSchedule.title')}/>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Break")}>
+          <WeatherWindows title={t("break.title")} />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate("OfficeInfo")}>
+          <WeatherWindows title={t("officeInfo.title")} />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate("PhoneNumber")}>
+          <WeatherWindows title={t("phoneNumber.title")} />
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => navigation.navigate("BusSchedule")}>
+          <WeatherWindows title={t("busSchedule.title")} />
+        </TouchableOpacity>
       </ScrollView>
 
       <SettingsModal
@@ -77,8 +71,6 @@ const MainScreens = () => {
     </LinearGradient>
   );
 };
-
-
 
 const styles = StyleSheet.create({
   container: {
@@ -90,11 +82,11 @@ const styles = StyleSheet.create({
     paddingTop: 100,
   },
   logo: {
-    position: 'absolute',
+    position: "absolute",
   },
   scrollViewStyle: {
     flex: 1,
-    width: '100%',
+    width: "100%",
   },
   weatherContainer: {
     marginTop: 20,
@@ -106,7 +98,7 @@ const styles = StyleSheet.create({
     height: 50,
     justifyContent: "center",
     alignItems: "center",
-    marginTop:5,
+    marginTop: 5,
   },
   inputWrapper: {
     width: 200,

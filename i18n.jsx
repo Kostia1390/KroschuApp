@@ -20,6 +20,9 @@ i18n
         "shift.title": "Shift",
         "shift.theory": "Training department (Theory)",
         "shift.technical": "Technical department, MUST01, Warehouse, QS-WE",
+        "shift.busOffice": "Office shuttle buses",
+        "bus.busOfficePolyova": "Poleva route",
+
 
 
 
@@ -44,6 +47,9 @@ i18n
           "shift.title": "Зміна",
           "shift.theory": "Навчальний відділ(Теорія)",
           "shift.technical": "Технічний відділ, MUST01, Склад, QS-WE",
+          "bus.busOffice": "Офісні маршрутки",
+          "bus.busOfficePolyova": "Маршрут Польова",
+
 
 
 
@@ -66,9 +72,12 @@ i18n
           "settings.language": "Ändere die Sprache",
           "theoty.title": "Theorie",
           "safety.title": "Sicherheitsausrüstung",
-          "shift.title": "Ändern",
+          "shift.title": "Schicht",
           "shift.theory": "Abteilung Ausbildung (Theorie)",
           "shift.technical": "Technische Abteilung, MUST01, Lager, QS-WE",
+          "shift.busOffice": "Büro-Kleinbusse",
+          "bus.busOfficePolyova": "Route Poleva",
+
 
 
 
