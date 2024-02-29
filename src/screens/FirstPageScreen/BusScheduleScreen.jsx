@@ -2,26 +2,23 @@ import React from "react";
 import { View, ScrollView, StyleSheet, TouchableOpacity } from "react-native";
 import { Typography } from "../../Typography";
 import { LinearGradient } from "expo-linear-gradient";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
+import WeatherWindows from "../../components/WeatherWindows";
 
 const BusScheduleScreen = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
 
-
   return (
-    <LinearGradient
-      colors={["#ffffff", "#ffffff"]}
-      style={styles.container}
-    >
+    <LinearGradient colors={["#ffffff", "#ffffff"]} style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-        <BackArrowPurpleSvg width={40} height={40} />
+          <BackArrowPurpleSvg width={40} height={40} />
         </TouchableOpacity>
         <Typography f24 semibold color="#563187" textAlign="center">
-        {t('busSchedule.title')}
+          {t("busSchedule.title")}
         </Typography>
         <View style={{ width: 30, height: 30 }} />
       </View>
@@ -29,7 +26,9 @@ const BusScheduleScreen = () => {
         showsVerticalScrollIndicator={false}
         style={{ marginTop: 20 }}
       >
-       <Typography>123</Typography>
+        <TouchableOpacity onPress={() => navigation.navigate("OfficePolyova")}>
+          <WeatherWindows title={`${t("bus.busOffice")}`} />
+        </TouchableOpacity>
       </ScrollView>
     </LinearGradient>
   );
@@ -40,31 +39,13 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
     width: "100%",
-    paddingHorizontal: 20,
+    paddingHorizontal: 40,
     paddingTop: 50,
   },
   header: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: 10,
-  },
-  dailyForecast: {
-    borderBottomWidth: 8,
-    borderBottomColor: "#fff",
-    paddingBottom: 10,
-  },
-  hourlyForecast: {
-    borderBottomWidth: 1,
-    borderBottomColor: "#fff",
-    paddingVertical: 10,
-    alignItems: "center",
-  },
-  lastHourlyForecast: {
-    borderBottomWidth: 0,
-  },
-  lastDailyForecast: {
-    borderBottomWidth: 0,
   },
 });
 

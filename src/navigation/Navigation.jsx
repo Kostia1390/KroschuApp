@@ -8,19 +8,15 @@ import BreakScreen from "../screens/FirstPageScreen/BreakScreen";
 import OfficeInfoScreen from "../screens/FirstPageScreen/OfficeInfoScreen";
 import PhoneNumberScreen from "../screens/FirstPageScreen/PhoneNumberScreen";
 import BusScheduleScreen from "../screens/FirstPageScreen/BusScheduleScreen";
-import TheoryProgramScreen from "../screens/LernProgramScreen/TheoryProgramScreen";
 import SafetyProgramScreen from "../screens/LernProgramScreen/SafetyProgramScreen";
 import NShiftScreen from "../screens/BreakScreen/NShiftScreen";
 import IShiftScreen from "../screens/BreakScreen/IShiftScreen";
 import IIShiftScreen from "../screens/BreakScreen/IIShiftScreen";
 import IIIShiftScreen from "../screens/BreakScreen/IIIShiftScreen";
 
-
-
+import OfficePolyovaScreen from "../screens/BusScreen/OfficePolyovaScreen";
 
 import CitySearchScreen from "../screens/CitySearchScreen";
-
-
 
 const Stack = createNativeStackNavigator();
 
@@ -48,52 +44,52 @@ export const Navigation = () => {
           component={OfficeInfoScreen}
           options={{ headerShown: false }}
         />
-           <Stack.Screen
+        <Stack.Screen
           name="Break"
           component={BreakScreen}
           options={{ headerShown: false }}
-/>
-           <Stack.Screen
+        />
+        <Stack.Screen
           name="PhoneNumber"
           component={PhoneNumberScreen}
           options={{ headerShown: false }}
         />
-            <Stack.Screen
+        <Stack.Screen
           name="BusSchedule"
           component={BusScheduleScreen}
           options={{ headerShown: false }}
         />
-          <Stack.Screen
-          name="TheoryProgram"
-          component={TheoryProgramScreen}
-          options={{ headerShown: false }}
-        />
-            <Stack.Screen
+        <Stack.Screen
           name="SafetyProgram"
           component={SafetyProgramScreen}
           options={{ headerShown: false }}
         />
-           <Stack.Screen
+        <Stack.Screen
           name="NShift"
           component={NShiftScreen}
           options={{ headerShown: false }}
         />
-             <Stack.Screen
+        <Stack.Screen
           name="IShift"
           component={IShiftScreen}
           options={{ headerShown: false }}
         />
-             <Stack.Screen
+        <Stack.Screen
           name="IIShift"
           component={IIShiftScreen}
           options={{ headerShown: false }}
         />
-             <Stack.Screen
+        <Stack.Screen
           name="IIIShift"
           component={IIIShiftScreen}
           options={{ headerShown: false }}
         />
-          <Stack.Screen
+        <Stack.Screen
+          name="OfficePolyova"
+          component={OfficePolyovaScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="CitySearchScreen"
           component={CitySearchScreen}
           options={{ headerShown: false }}

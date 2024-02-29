@@ -4,14 +4,8 @@ import { Typography } from "../Typography";
 import BackArrowSvg from "../../assets/icons/backArrow.svg";
 
 const WeatherWindows = ({ title }) => {
-
   return (
-    <View
-      style={[
-        styles.container,
-        { backgroundColor:  "#563187" },
-      ]}
-    >
+    <View style={[styles.container, { backgroundColor: "#563187" }]}>
       <View style={styles.textContainer}>
         <Typography color={"#fff"} numberOfLines={1} adjustsFontSizeToFit>
           {title}
