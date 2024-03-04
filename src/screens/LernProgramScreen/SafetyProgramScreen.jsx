@@ -1,43 +1,19 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
-import {
-  View,
-  StyleSheet,
-  ScrollView,
-  TouchableOpacity,
-} from "react-native";
-import { useTranslation } from 'react-i18next';
+import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
+import { useTranslation } from "react-i18next";
 import { Typography } from "../../Typography";
 import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
+import HeaderScreen from "../../components/HeaderScreen";
 
 const SafetyProgramScreen = () => {
   const navigation = useNavigation();
   const { t } = useTranslation();
 
-
-
-
   return (
-    <LinearGradient
-      colors={ ["#ffffff", "#ffffff"]}
-      style={styles.container}
-    >
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <BackArrowPurpleSvg width={40} height={40} />
-        </TouchableOpacity>
-        <Typography f24 semibold color="#563187" textAlign="center">
-        {t('safety.title')}
-    </Typography>
-        <View style={{ width: 20, height: 20 }} />
-      </View>
+    <LinearGradient colors={["#ffffff", "#ffffff"]} style={styles.container}>
+      <HeaderScreen title={t("safety.title")} />
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={{ marginTop: 20 }}

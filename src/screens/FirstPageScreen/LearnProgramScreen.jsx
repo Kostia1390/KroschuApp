@@ -6,6 +6,7 @@ import WeatherWindows from "../../components/WeatherWindows";
 import { Typography } from "../../Typography";
 import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
+import HeaderScreen from "../../components/HeaderScreen";
 
 const LearnProgramScreen = () => {
   const navigation = useNavigation();
@@ -13,15 +14,7 @@ const LearnProgramScreen = () => {
 
   return (
     <LinearGradient colors={["#ffffff", "#ffffff"]} style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <BackArrowPurpleSvg width={40} height={40} />
-        </TouchableOpacity>
-        <Typography f24 semibold color="#563187" textAlign="center">
-          {t("learnProgram.title")}
-        </Typography>
-        <View style={{ width: 20, height: 20 }} />
-      </View>
+      <HeaderScreen title={t("learnProgram.title")} />
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={{ marginTop: 20 }}
@@ -40,7 +33,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start",
     width: "100%",
     paddingHorizontal: 40,
-    paddingTop: 50,
+    paddingTop: 10,
   },
   header: {
     flexDirection: "row",
