@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
 import WeatherWindows from "../../components/WeatherWindows";
+import HeaderScreen from "../../components/HeaderScreen";
 
 const BusScheduleScreen = () => {
   const navigation = useNavigation();
@@ -13,15 +14,7 @@ const BusScheduleScreen = () => {
 
   return (
     <LinearGradient colors={["#ffffff", "#ffffff"]} style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <BackArrowPurpleSvg width={40} height={40} />
-        </TouchableOpacity>
-        <Typography f24 semibold color="#563187" textAlign="center">
-          {t("busSchedule.title")}
-        </Typography>
-        <View style={{ width: 30, height: 30 }} />
-      </View>
+      <HeaderScreen title={t("busSchedule.title")} />
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={{ marginTop: 20 }}

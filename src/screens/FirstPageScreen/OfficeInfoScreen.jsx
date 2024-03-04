@@ -5,6 +5,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useTranslation } from "react-i18next";
 import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import { useNavigation } from "@react-navigation/native";
+import HeaderScreen from "../../components/HeaderScreen";
 
 const OfficeInfoScreen = () => {
   const navigation = useNavigation();
@@ -12,15 +13,7 @@ const OfficeInfoScreen = () => {
 
   return (
     <LinearGradient colors={["#ffffff", "#fafafa"]} style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <BackArrowPurpleSvg width={40} height={40} />
-        </TouchableOpacity>
-        <Typography f24 semibold color="#563187" textAlign="center">
-          {t("officeInfo.title")}
-        </Typography>
-        <View style={{ width: 30, height: 30 }} />
-      </View>
+      <HeaderScreen title={t("officeInfo.title")} />
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={{ marginTop: 20 }}

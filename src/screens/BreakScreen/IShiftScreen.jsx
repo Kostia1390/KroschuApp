@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import BackArrowPurpleSvg from "../../../assets/icons/backArrowPurple.svg";
 import WeatherWindows from "../../components/WeatherWindows";
 import { useNavigation } from "@react-navigation/native";
+import HeaderScreen from "../../components/HeaderScreen";
 
 const IShiftScreen = () => {
   const navigation = useNavigation();
@@ -169,15 +170,8 @@ const IShiftScreen = () => {
   ];
   return (
     <LinearGradient colors={["#ffffff", "#fafafa"]} style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <BackArrowPurpleSvg width={40} height={40} />
-        </TouchableOpacity>
-        <Typography f24 semibold color="#563187" textAlign="center">
-          {`I ${t("shift.title")}`}
-        </Typography>
-        <View style={{ width: 30, height: 30 }} />
-      </View>
+      <HeaderScreen title={`I ${t("shift.title")}`} />
+
       <ScrollView showsVerticalScrollIndicator={false}>
         {shifts.map((shift, index) => (
           <View key={shift.title}>

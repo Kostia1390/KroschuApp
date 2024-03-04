@@ -13,6 +13,7 @@ import NShiftScreen from "../screens/BreakScreen/NShiftScreen";
 import IShiftScreen from "../screens/BreakScreen/IShiftScreen";
 import IIShiftScreen from "../screens/BreakScreen/IIShiftScreen";
 import IIIShiftScreen from "../screens/BreakScreen/IIIShiftScreen";
+import ColorScreen from "../screens/TestScreen/ColorScreen";
 
 import OfficePolyovaScreen from "../screens/BusScreen/OfficePolyovaScreen";
 
@@ -92,6 +93,11 @@ export const Navigation = () => {
         <Stack.Screen
           name="CitySearchScreen"
           component={CitySearchScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="ColorScreen"
+          component={ColorScreen}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
