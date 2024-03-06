@@ -79,7 +79,7 @@ export const Typography = styled(Text)<TypographyProps>`
       opacity: props.opacity || 1,
       textDecorationLine: props.underline ? 'underline' : 'none',
       justifyContent: props.justifyContent || 'flex-start',
-      color: props.color || '#2c2c2c',
+      color: props.color || '#000',
       textAlign: props.textAlign || 'left',
 
     }
